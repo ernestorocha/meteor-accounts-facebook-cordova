@@ -20,12 +20,7 @@ Accounts.registerLoginHandler(function(loginRequest) {
   var fields = _.pick(identity, whitelisted);
   _.extend(serviceData, fields);
 
-  var options = {profile: {}};
-  var profileFields = _.pick(identity, Meteor.settings.public.facebook.profileFields);
-  _.extend(options.profile, profileFields);
-
-  return Accounts.updateOrCreateUserFromExternalService("facebook", serviceData, options);
-
+  return Accounts.updateOrCreateUserFromExternalService("facebook", serviceData, {profile: {name: identity.name}});
 });
 
 var getIdentity = function (accessToken) {
