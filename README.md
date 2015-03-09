@@ -30,6 +30,12 @@ Meteor 0.8.3
 ````
 mrt add accounts-facebook-cordova
 ````
+
+You must also remove Meteor's default accounts-facebook package:
+```
+meteor remove accounts-facebook
+```
+
 *Note: For testing you can also add accounts-ui package.*
 
 
