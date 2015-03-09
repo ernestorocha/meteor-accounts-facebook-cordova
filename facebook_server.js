@@ -49,7 +49,6 @@ var getProfilePicture = function (accessToken) {
 };
 
 
-  Accounts.oauth.registerService('facebook');
   if (Meteor.settings &&
       Meteor.settings["cordova"] &&
       Meteor.settings["cordova"]["com.phonegap.plugins.facebookconnect"] &&
