@@ -16,10 +16,7 @@
       });
     }
 
-    if (options.requestPermissions == null)
-      options.requestPermissions = Meteor.settings.public.facebook.permissions;
-      
-    if (typeof facebookConnectPlugin != "undefined" && Meteor.settings) {
+    if (typeof facebookConnectPlugin != "undefined" && Meteor.isCordova) {
       facebookConnectPlugin.getLoginStatus(
         function (response) {
           if (response.status != "connected") {

@@ -1,8 +1,8 @@
 Package.describe({
     summary: "Login service for Facebook accounts (works with cordova)",
-    version: "1.1.3",
-    name: "particle4dev:cordova-fb",
-    git: "https://github.com/particle4dev/meteor-accounts-facebook-cordova.git"
+    version: "1.1.4",
+    name: "vicentealencar:cordova-fb",
+    git: "https://github.com/vicentealencar/meteor-accounts-facebook-cordova.git"
 });
 
 // meteor test-packages ./
