@@ -3,6 +3,10 @@ Accounts.registerLoginHandler(function(loginRequest) {
     return undefined;
   }
 
+  if (!loginRequest.accessToken) {
+    loginRequest = loginRequest.authResponse;
+  }
+
   var identity = getIdentity(loginRequest.accessToken);
 
   var serviceData = {
