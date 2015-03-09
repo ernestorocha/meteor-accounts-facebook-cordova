@@ -1,6 +1,6 @@
 Package.describe({
     summary: "Login service for Facebook accounts (works with cordova)",
-    version: "1.1.8",
+    version: "1.1.9",
     name: "vicentealencar:cordova-fb",
     git: "https://github.com/vicentealencar/meteor-accounts-facebook-cordova.git"
 });

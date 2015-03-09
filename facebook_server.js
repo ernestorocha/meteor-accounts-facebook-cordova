@@ -1,3 +1,4 @@
+Accounts.oauth.registerService('facebook');
 Accounts.registerLoginHandler(function(loginRequest) {
   if(!loginRequest.cordova) {
     return undefined;
