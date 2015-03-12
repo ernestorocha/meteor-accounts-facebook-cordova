@@ -15,12 +15,6 @@ Accounts.registerLoginHandler(function(loginRequest) {
     expiresAt: (+new Date) + (1000 * loginRequest.expiresIn)
   };
 
-  var whitelisted = ['id', 'email', 'name', 'first_name',
-      'last_name', 'link', 'username', 'gender', 'locale', 'age_range'];
-
-  var fields = _.pick(identity, whitelisted);
-  _.extend(serviceData, fields);
-
   return Accounts.updateOrCreateUserFromExternalService("facebook", serviceData, {profile: {name: identity.name}});
 });
 
