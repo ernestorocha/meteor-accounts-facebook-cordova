@@ -11,6 +11,7 @@ Accounts.registerLoginHandler(function(loginRequest) {
   var identity = getIdentity(loginRequest.accessToken);
 
   var serviceData = {
+    id: loginRequest.userID,
     accessToken: loginRequest.accessToken,
     expiresAt: (+new Date) + (1000 * loginRequest.expiresIn)
   };
